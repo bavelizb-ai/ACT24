@@ -28,8 +28,13 @@ while True :
                 nombre = input("Ingrese nombre : ").title()
                 mostrar(nombre)
 
-            case 3 :pass
-            case 4:pass
+            case 3 :
+                nombre = input("Ingrese el nombre : ")
+                eliminar(nombre)
+            case 4:
+                nombre = input("Ingrese el nombre : ")
+                lvlup(nombre)
+
             case 5:pass
             case 6:listar()
             case 7:pass

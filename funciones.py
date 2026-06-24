@@ -51,3 +51,29 @@ def listar():
 
     else:
         print("No hay personajes registrados")
+
+
+def eliminar(nombre):
+    posicion = buscar(nombre)
+    if posicion >= 0:
+        personajes.pop(posicion)
+        print("personaje eliminado ")
+    else:
+        print("Personaje no existe")
+
+
+def lvlup(nombre):
+    posicion = buscar(nombre)
+    if posicion >= 0:
+       nivel =  personajes[posicion]["nivel"]
+       if nivel <50:
+            personajes[posicion]["nivel"] = nivel+1
+            print("Nivel aumentado")
+            if nivel >= 30:
+                personajes[posicion]["rango"] = "Elite"
+       else:
+           print("Ya a alcanzado el nivel maximo ")
+
+        
+    else:
+        print("Personaje no existe")
