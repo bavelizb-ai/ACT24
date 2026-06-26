@@ -29,15 +29,15 @@ while True :
                 mostrar(nombre)
 
             case 3 :
-                nombre = input("Ingrese el nombre : ")
+                nombre = input("Ingrese el nombre : ").title()
                 eliminar(nombre)
             case 4:
-                nombre = input("Ingrese el nombre : ")
+                nombre = input("Ingrese el nombre : ").title()
                 lvlup(nombre)
 
-            case 5:pass
+            case 5:estadisticas()
             case 6:listar()
-            case 7:pass
+            case 7:break
             case _: print("No valido ")
     except Exception as e :
         print(f"ERROR {e}")

@@ -77,3 +77,33 @@ def lvlup(nombre):
         
     else:
         print("Personaje no existe")
+
+
+
+
+def estadisticas():
+    if len(personajes)>=0:
+
+        sumaniveles =0
+        Guerrero = 0
+        Picaro = 0
+        Mago = 0
+
+        for pj in personajes:
+            sumaniveles += pj ["nivel"]
+            match pj["clase"]:
+                case "Guerrero": Guerrero +=1
+                case "Mago": Mago +=1
+                case "Picaro": Picaro += 1
+        promedio = round(sumaniveles/len(personajes), 1)
+        print(f""" 
+            Nivel promedio del gremio : {promedio }
+            Cantidad de Guerreros {Guerrero}
+            Cantidad de Picaros {Picaro}
+            Cantidad de Magos {Mago}""")
+    else:
+        print("No hay personajes registrados ")
+
+
+
+    
